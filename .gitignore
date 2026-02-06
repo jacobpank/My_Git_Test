@@ -1,0 +1,18 @@
+# IDE Settings
+# Android Studio Settings
+.idea/
+*.iml
+
+# Gradle & Build
+.gradle/
+/build/
+/*/build/
+
+# Local configuration
+local.properties
+.DS_Store
+
+# Android specific Temporaries
+/captures/
+.externalNativeBuild/
+.cxx/
