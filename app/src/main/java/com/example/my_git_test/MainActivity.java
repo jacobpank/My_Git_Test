@@ -1,6 +1,8 @@
 package com.example.my_git_test;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    private Button btnExample;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +23,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        
+        btnExample = findViewById(R.id.btnExample);
+        btnExample.setOnClickListener(v -> {
+            Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show();
+        }); 
     }
 }
