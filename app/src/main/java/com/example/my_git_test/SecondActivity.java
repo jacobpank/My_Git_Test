@@ -2,6 +2,7 @@ package com.example.my_git_test;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -27,6 +28,12 @@ public class SecondActivity extends AppCompatActivity {
         intent.getExtras();
         String message = intent.getStringExtra("message");
         int number = intent.getIntExtra("number", 0);
-        Toast.makeText(this, "message = "+message+"\nnumber = "+number, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "message = " + message + "\nnumber = " + number, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.my_menu, menu);
+        return true;
     }
 }
